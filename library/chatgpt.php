@@ -49,12 +49,31 @@ class ChatGPT
 
 
     public function aiGetFrequencies($brainWaveGoal) {
-        $prompt = 'You are a binaural beat generator. Generate 2 frequencies (frequencyOne) and (FrequencyTwo) that best match this brain wave goal: "' . $brainWaveGoal . '". Output in only json. numerical values only.  ';
+        $prompt = 'You are a binaural beat generator. Generate 2 frequencies (frequencyOne) and (FrequencyTwo) that best match this brain wave goal: "' . $brainWaveGoal . '". Output in only json. numerical values only. ';
         $attempts = 0;
     
         while ($attempts < 1) {
             $response = json_decode($this->chat($prompt));
             if (isset($response->frequencyOne) && isset($response->frequencyTwo)) {
+    
+                $servername = $_ENV['DB_HOST'];
+                $username = $_ENV['DB_USER'];
+                $password = $_ENV['DB_PASSWORD'];
+                $dbname = $_ENV['DB'];
+    
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+    
+                $stmt = $conn->prepare("INSERT INTO prompts (prompt, response) VALUES (?, ?)");
+                $stmt->bind_param("ss", $brainWaveGoal, json_encode($response));
+                $stmt->execute();
+    
+                $stmt->close();
+                $conn->close();
+                
+                
                 return [
                    $response->frequencyOne,
                    $response->frequencyTwo
@@ -66,6 +85,7 @@ class ChatGPT
     
         return [];
     }
+    
     
     
     

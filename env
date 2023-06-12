@@ -1,1 +1,4 @@
 API_KEY=YOUR_OPENAI_API_KEY
+db_password=PW
+db_user=DBUSER
+db=DB

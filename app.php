@@ -90,18 +90,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $brainWaveGoal = $_POST['brainWaveGoal'];
         $brainWaveGoal = htmlspecialchars($brainWaveGoal, ENT_QUOTES, 'UTF-8');
 
-        // Save the prompt locally
-        $file = 'locker/.prompts.txt';
-        $currentContent = file_get_contents($file);
-
-        if (!empty($currentContent)) {
-            $currentContent .= "\n";
-        }
-
-        $currentContent .= $brainWaveGoal;
-
-        file_put_contents($file, $currentContent, FILE_APPEND);
-
         $duration = $_POST['duration'];
         $contentFilter = new promptFilter();
 
