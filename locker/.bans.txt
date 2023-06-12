@@ -1,0 +1,4 @@
+2023-05-11 23:09:30 - User banned for violating prompt filter.
+2023-05-11 23:09:31 - User banned for violating prompt filter.
+2023-05-11 23:11:55 - User banned for violating prompt filter.
+2023-05-11 23:12:13 - User banned for violating prompt filter.

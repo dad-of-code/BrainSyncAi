@@ -1,0 +1,32 @@
+{
+    "name": "dad-of-code/prompt-filter-php",
+    "description": "A ai prompt filter class to prevent inappropriate requests.",
+    "keywords": ["prompt-filter", "prompt filter", "prompts", "safe prompts", "chatgpt prompt filter", "prompt checker", "dad of code", "dadofcode", "dad-of-code"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dad of Code",
+            "email": "hello-world@dadofcode.com",
+            "homepage": "https://github.com/dad-of-code"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5 || ^8.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "dad-of-code\\prompt-filter-php\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "dad-of-code\\prompt-filter-php\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
