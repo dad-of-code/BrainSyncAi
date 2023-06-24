@@ -10,6 +10,15 @@ if (!isset($_SESSION['prompt_alert'])) {
         exit('You have exceeded the allowed number of prompt filter violations. You have been temporarily banned. Try again later.');
     }
 }
+
+require_once 'vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+// Load environment variables from .env file
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
