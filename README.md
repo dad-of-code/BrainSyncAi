@@ -21,6 +21,10 @@
 7. Rename the env to .env
 8. Launch the website
 
+### Note
+
+This uses PHP to create the WAV files and is not efficient. So it does require quite a bit of RAM. I have it overidding the php.ini with 1G of ram. (We can probably come up with a better way to do this.)
+
 ### Disclaimer
 
 This was just a quick project I came up with and results could differ. I used chatGPT to help write the code as well, this project was a test of chat's capabilities. If you find interest in this project, feel free to join me in improving and expanding it! 
