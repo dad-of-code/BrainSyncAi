@@ -18,8 +18,9 @@
 3. Create a database and add the brainsyncai.sql to the database
 5. Add database details to the env
 6. Add a chatGPT api into the env
-7. Rename the env to .env
-8. Launch the website
+7. Add URL to the env
+8. Rename the env to .env
+9. Launch the website
 
 ### Note
 
