@@ -15,7 +15,7 @@
 
 1. Upload to environment
 2. Run `composer install`
-3. Create a database and add the brainsyncai.sql to the database
+3. Create a database and add the brainsyncai.sql to the SQL database
 5. Add database details to the env
 6. Add a chatGPT api into the env
 7. Add URL to the env
